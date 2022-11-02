@@ -577,6 +577,10 @@ describe SimpleXlsxReader do
       it 'parses looong strings containing unicode' do
         _(ss[6]).must_include 'It only happens with both unicode *and* really long text.'
       end
+
+      it 'parses with phonetics' do
+        _(ss[7]).must_equal '販売価格'
+      end
     end
 
     describe 'style_types' do
